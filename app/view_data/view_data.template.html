@@ -1,0 +1,36 @@
+<div style="width:950px;">
+
+  <table class="ui celled striped table">
+    <thead>
+    <tr>
+      <th colspan="3">
+        Cloud server
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="x in files">
+      <td class="collapsing">
+        <i class="{{x.Type}} icon"></i>
+        {{ x.Name }}
+      </td>
+      <td>{{ x.Details }}</td>
+      <td>{{ x.Time }}</td>
+    </tr>
+  </tbody>
+</table>
+
+  <div class="ui active indicating progress" data-value="49" data-total="100" id="UploadBar">
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="label">Uploading Files</div>
+  </div>
+
+  <div class="ui active indicating progress" data-value="0" data-total="100" id="DownloadBar">
+    <div class="bar">
+      <div class="progress"></div>
+    </div>
+    <div class="label">Downloading Files</div>
+  </div>
+</div>

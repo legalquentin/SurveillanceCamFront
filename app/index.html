@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="components/dist/semantic.min.css">
+  <script   src="https://code.jquery.com/jquery-3.2.1.min.js"   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+  <script src="components/dist/semantic.min.js"></script>
+
+  <!-- Site Properties -->
+  <title>Monitor - application</title>
+  <link rel="stylesheet" type="text/css" href="components/dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="components/dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="components/dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/form.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/input.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/button.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/message.css">
+  <link rel="stylesheet" type="text/css" href="components/dist/components/icon.css">
+  <script src="components/dist/components/form.js"></script>
+  <script src="components/dist/components/transition.js"></script>
+</head>
+<style>
+body {
+  background: #ffffff; /* fallback for old browsers */
+}
+.ui.menu .item:before {
+   content: none;
+}
+</style>
+<body>
+  <div class="ui top fixed inverted menu" style="position:fixed;">
+    <div class="ui container" id="navbar_container">
+      <a href="#" id="top_sidebar" class="header item">
+        Super Project Name
+      </a>
+      <a href="#" class="item right floated">
+        <i class="log out icon"></i>
+        Log Out
+      </a>
+      <!--
+      <div class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Link Item</a>
+          <a class="item" href="#">Link Item</a>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+          <a class="item" href="#">Link Item</a>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <div class="ui bottom attached segment pushable" style="position:fixed;">
+    <div class="ui left inverted vertical menu sidebar visible" id="sidebar" style="top: 38px; position:fixed;">
+      <a class="item" href="#!/home">
+        <i class="home icon"></i>
+        Home
+      </a>
+      <a class="item" href="#!/camera">
+        <i class="record icon"></i>
+        Cameras
+      </a>
+      <a class="item" href="#!/alerts">
+        <i class="warning sign icon"></i>
+        Alerts
+      </a>
+      <a class="item" href="#!/logs">
+        <i class="browser icon"></i>
+        Logs
+      </a>
+      <a class="item" href="#!/data">
+        <i class="disk outline icon"></i>
+        Data
+      </a>
+    </div>
+    <div style="top:70px;" class="pusher">
+      <div ng-view></div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("navbar_container").style.width = screen.width+"px";
+    //document.getElementById("top_sidebar").style.width = document.getElementById("sidebar").style.width-12;
+  </script>
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="app.js"></script>
+<script src="factories.js"></script>
+<script src="view_login/view_login.module.js"></script>
+<script src="view_login/view_login.component.js"></script>
+<script src="view_main/view_main.module.js"></script>
+<script src="view_main/view_main.component.js"></script>
+<script src="view_camera/view_camera.module.js"></script>
+<script src="view_camera/view_camera.component.js"></script>
+<script src="view_alerts/view_alerts.module.js"></script>
+<script src="view_alerts/view_alerts.component.js"></script>
+<script src="view_logs/view_logs.module.js"></script>
+<script src="view_logs/view_logs.component.js"></script>
+<script src="view_data/view_data.module.js"></script>
+<script src="view_data/view_data.component.js"></script>
+<script src="components/version/version.js"></script>
+<script src="components/version/version-directive.js"></script>
+<script src="components/version/interpolate-filter.js"></script>
+</body>
+</html>
